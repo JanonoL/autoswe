@@ -1,0 +1,20 @@
+{
+  "_comment": "AI-SDLC 推荐的 gsd config 覆盖值。install 时合并进目标项目 .planning/config.json，开启与方法论对应的门控。已有 config 只覆盖这些键，不动其他。",
+  "workflow": {
+    "plan_check": true,
+    "verifier": true,
+    "security_enforcement": true,
+    "security_block_on": "high",
+    "nyquist_validation": true
+  },
+  "gates": {
+    "confirm_plan": true,
+    "confirm_breakdown": true,
+    "confirm_transition": true,
+    "issues_review": true
+  },
+  "safety": {
+    "always_confirm_destructive": true,
+    "always_confirm_external_services": true
+  }
+}
